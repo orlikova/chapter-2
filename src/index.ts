@@ -1,3 +1,5 @@
+// FizzBuzz
+
 function fizzBuzz() {
     for (let n = 1; n <= 100; n++) {
         const isFizz = n % 3 === 0 && n % 5 !== 0;
@@ -17,6 +19,41 @@ function fizzBuzz() {
     }
 }
 
-fizzBuzz();
+//fizzBuzz();
+
+// Looping a Triangle
+
+function triangleLoop() {
+    let myStr = '#';
+    for (let i = 1; i <= 7; i++) {
+        console.log(myStr);
+        myStr = myStr + '#';
+    }
+}
+
+//triangleLoop();
+
+// Chessboard
+
+function chessBoard(size: number) {
+    const white = ' ';
+    const black = '#';
+    let board = '';
+
+    for (let i = 1; i <= size; i++) {
+
+        for (let j = 1; j <= size; j++) {
+            if ((i + j) % 2 == 0) {
+                board += white;
+            } else {
+                board += black;
+            }
+        }
+        board += '\n';
+    }
+    console.log(board);
 
 
+}
+
+chessBoard(24);
